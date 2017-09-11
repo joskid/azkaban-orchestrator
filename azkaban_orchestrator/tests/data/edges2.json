@@ -1,0 +1,42 @@
+[
+  {
+    "head": {"pretty_params": "", "unique_name": "a", "params": [], "name": "a"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "b", "params": [], "name": "b"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "b", "params": [], "name": "b"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "d", "params": [], "name": "d"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "a", "params": [], "name": "a"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "c", "params": [], "name": "c"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "d", "params": [], "name": "d"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "f", "params": [], "name": "f"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "f", "params": [], "name": "f"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "e", "params": [], "name": "e"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "d", "params": [], "name": "d"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "e", "params": [], "name": "e"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "c", "params": [], "name": "c"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "e", "params": [], "name": "e"}
+  },
+  {
+    "head": {"pretty_params": "", "unique_name": "c", "params": [], "name": "c"},
+    "style": "hard",
+    "tail": {"pretty_params": "", "unique_name": "g", "params": [], "name": "g"}
+  }
+]

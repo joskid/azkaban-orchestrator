@@ -1,0 +1,31 @@
+[
+  {
+    "head": {
+      "pretty_params": "",
+      "unique_name": "s1",
+      "params": [],
+      "name": "s1"
+    },
+    "style": "hard",
+    "tail": {
+      "pretty_params": "",
+      "unique_name": "s2",
+      "params": [], "name": "s2"
+    }
+  },
+  {
+    "head": {
+      "pretty_params": "",
+      "unique_name": "s2",
+      "params": [],
+      "name": "s2"
+    },
+    "style": "hard",
+    "tail": {
+      "pretty_params": "",
+      "unique_name": "e",
+      "params": [],
+      "name": "e"
+    }
+  }
+]
