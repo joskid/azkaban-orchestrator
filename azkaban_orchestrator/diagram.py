@@ -3,6 +3,9 @@ from graphviz import Digraph
 
 
 class Diagram(object):
+    """
+    Diagram class to parse and render the diagram file.
+    """
 
     def __init__(self, diagram_name, diagram_file_name):
         """
@@ -100,7 +103,10 @@ class Diagram(object):
 
             unique_name = node_name + hashlib.md5(str(name_values)).hexdigest()
 
-            pretty_params = ', '.join([name_value['name'] + (' = ' if name_value['value'] else '') + name_value['value'] for name_value in name_values])
+            pretty_params = ', '.join([
+                name_value['name'] + (' = ' if name_value['value'] else '') + name_value['value']
+                for name_value in name_values
+            ])
 
         return {
             'name': node_name,
@@ -113,7 +119,9 @@ class Diagram(object):
         """
         render the graph using Graphviz library
 
-        :param edges: edges e.g. [{head:clr,tail:c,style:hard},{head:c,tail:d,style:soft} nodes are dict
+        :param edges: edges e.g.
+        [{head:clr,tail:c,style:hard},{head:c,tail:d,style:soft}
+        clr, c and d are dictionary
         :param clusters: clusters e.g. {clr: [a,b]}
         """
 
@@ -123,9 +131,9 @@ class Diagram(object):
 
         # draw the clusters and the nodes in each of them
         for cluster in clusters:
-            with dot.subgraph(name='cluster_{}'.format(cluster)) as c:
+            with dot.subgraph(name='cluster_{}'.format(cluster)) as cls:
                 for node in clusters[cluster]:
-                    c.node(node['unique_name'], node['name'] + '\n' + node['pretty_params'])
+                    cls.node(node['unique_name'], node['name'] + '\n' + node['pretty_params'])
 
         # find out all nodes from the edges
         nodes = []
@@ -136,7 +144,8 @@ class Diagram(object):
                 nodes.append(edge['tail'])
 
         # draw all the nodes
-        # unique_name is used for the name of the node which is generated uniquely based on params and name of the node
+        # unique_name is used for the name of the node
+        # which is generated uniquely based on params and name of the node
         for node in nodes:
             dot.node(node['unique_name'], node['name'] + '\n' + node['pretty_params'])
 
@@ -182,4 +191,3 @@ class Diagram(object):
 
         edges, clusters = self.parse_diagram()
         self.render(edges, clusters)
-

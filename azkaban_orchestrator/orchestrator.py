@@ -3,9 +3,13 @@ import graph
 
 
 class Client(object):
+    """
+    Orchestrator client class
+    """
 
     def __init__(self, diagram_file_name, host, username, password, logger):
         """
+        Initialise the client with diagram file and azkaban credentials
 
         :param diagram_file_name: diagram file name
         :param host: azkaban host
@@ -27,11 +31,19 @@ class Client(object):
         :param params: parameters needed ro run pipelines
         :return:
         """
-        d = diagram.Diagram("diagram", self.diagram_file_name)
-        edges, clusters = d.parse_diagram()
+        azk_diagram = diagram.Diagram("diagram", self.diagram_file_name)
+        edges, clusters = azk_diagram.parse_diagram()
 
-        g = graph.Graph(edges, clusters, params, self.host, self.username, self.password, self.logger)
+        azk_graph = graph.Graph(
+            edges,
+            clusters,
+            params,
+            self.host,
+            self.username,
+            self.password,
+            self.logger
+        )
 
         initial = diagram.Diagram.parse_node(initial) if initial else None
 
-        g.traverse(initial=initial)
+        azk_graph.traverse(initial=initial)

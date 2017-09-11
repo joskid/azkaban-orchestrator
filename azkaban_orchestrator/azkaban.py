@@ -1,11 +1,11 @@
 import time
 import requests
-import os
-
-MODULE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class Client(object):
+    """
+    Azkaban client class for interacting with Azkaban server
+    """
 
     def __init__(self, host, username, password, logger):
         """
@@ -87,7 +87,7 @@ class Client(object):
         :return: the sessions id
         """
 
-        """Creates a session with the scheduler"""
+        # Create a session with the scheduler
         params = {
             'action': 'login',
             'username': self.username,

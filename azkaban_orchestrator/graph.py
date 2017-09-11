@@ -3,6 +3,9 @@ import azkaban
 
 
 class Graph(object):
+    """
+    Graph class for traversing in the graph defined by diagram file.
+    """
 
     def __init__(self, edges, clusters, params, host, username, password, logger):
         """
@@ -221,7 +224,7 @@ class Graph(object):
                 for result in results:
                     if result['node'] in self.clusters[node['name']]:
                         if not result['status']:
-                                status = False
+                            status = False
 
                 compiled_result = {
                     'node': node,
@@ -237,4 +240,3 @@ class Graph(object):
             compiled_results.append(compiled_result)
 
         return compiled_results
-
