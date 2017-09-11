@@ -1,8 +1,6 @@
-Version 1.0.0 (Jira Ticket#)
+Version 1.0.0 
 -------------
 
-## Changes
 ## Features
-- Pipeline is born 
-## Fix
+- Orchestrator is born 
 
