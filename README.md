@@ -30,9 +30,8 @@ Create a file and define the dependencies between pipelines using the following 
         |
         v
         e
-
 ```
-Diagram file
+Sample1 diagram file
 ```
     s1 : a, b
     s2 : c, d
@@ -52,7 +51,7 @@ Diagram file
     v
     f(status=2)
 ```
-Diagram file
+Sample2 diagram file
 
 ```    
     a -> b
@@ -84,7 +83,8 @@ client = orchestrator.Client(
 # define the parameters need to pass to the orchestrator
 params = {'date':'20171202'}
 
-# define the initial pipeline if you need to start orchestration from specific pipeline otherwise pass None
+# define the initial pipeline 
+# if you need to start orchestration from a specific pipeline
 initial = None
 
 client.run(initial, params)
@@ -93,7 +93,6 @@ client.run(initial, params)
 
 To draw the diagram
 ```
-import logging
 from azkaban_orchestrator import diagram
 
 d = diagram.Diagram('test diagram', 'path/to/diagram_file')
