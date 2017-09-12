@@ -15,7 +15,7 @@ setup(
     test_suite="nose.collector",
     tests_require=['mock==2.0.0', 'nose'],
     install_requires=REQUIREMENTS,
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     url='https://github.com/telegraph/azkaban-orchestrator',
     license='MIT'
 )
