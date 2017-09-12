@@ -9,7 +9,7 @@ REQUIREMENTS = [
 setup(
     name='azkaban-orchestrator',
     version=__version__,
-    description='Azkaban Orchestraor',
+    description='Azkaban Orchestrator',
     author='Telegraph Data Platform team',
     packages=['azkaban_orchestrator'],
     test_suite="nose.collector",
