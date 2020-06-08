@@ -2,7 +2,7 @@ from setuptools import setup
 from azkaban_orchestrator import __version__
 
 REQUIREMENTS = [
-    'requests == 2.13.0',
+    'requests == 2.20.0',
     'graphviz == 0.8'
 ]
 
